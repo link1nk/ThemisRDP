@@ -7,7 +7,7 @@ AstNode Parser::Program()
 
 AstNode Parser::NumericLiteral()
 {
-    return AstNode{ "NumericLiteral", std::stoi(m_string) };
+    return AstNode{ AstNodeType::NUMERIC_LITERAL, std::stoi(m_string) };
 }
 
 AstNode Parser::parse(std::string string)
